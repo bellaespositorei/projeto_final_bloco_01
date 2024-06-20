@@ -2,9 +2,7 @@ package roupa.model;
 
 import java.util.Collection;
 
-import roupa.repository.RoupaRepository;
-
-public abstract class Roupa implements RoupaRepository{
+public abstract class Roupa {
 	
 	private int codigo;
 	private String tamanho;
@@ -55,14 +53,7 @@ public abstract class Roupa implements RoupaRepository{
 	
 	public abstract void exibirDetalhes();
 	
-	protected abstract void exibirDetalhes(Roupa roupa);
+	public abstract void exibirDetalhes(Roupa roupa);
 	
-	public abstract void novoPedido(Roupa roupa);
-
-	public abstract void procurarPedido(int codigo);
-
-	public abstract void editarPedido(int codigo, Roupa roupa);
-
-	public abstract void cancelarPedido(int codigo);
 	
 }

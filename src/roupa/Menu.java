@@ -1,9 +1,19 @@
 package roupa;
 
 import java.util.Scanner;
+import roupa.model.Roupa;
+import roupa.model.Top;
+import roupa.model.Short;
+
 
 public class Menu {
 	public static void main(String[] args) {
+		
+		//Teste da Classe Roupa
+		Roupa top1 = new Top(1, "Azul", "M", "Top Lyn");
+		top1.exibirDetalhes();
+        Roupa short1 = new Short(2, "Preto", "G", "Short Bella");
+        short1.exibirDetalhes();
 
 		Scanner sc = new Scanner(System.in);
 
@@ -13,19 +23,15 @@ public class Menu {
 
 			System.out.println("*****************************************************");
 			System.out.println("                                                     ");
-			System.out.println("                BANCO DO BRAZIL COM Z                ");
+			System.out.println("                      KON FITWEAR                    ");
 			System.out.println("                                                     ");
 			System.out.println("*****************************************************");
 			System.out.println("                                                     ");
-			System.out.println("            1 - Criar Conta                          ");
-			System.out.println("            2 - Listar todas as Contas               ");
-			System.out.println("            3 - Buscar Conta por Numero              ");
-			System.out.println("            4 - Atualizar Dados da Conta             ");
-			System.out.println("            5 - Apagar Conta                         ");
-			System.out.println("            6 - Sacar                                ");
-			System.out.println("            7 - Depositar                            ");
-			System.out.println("            8 - Transferir valores entre Contas      ");
-			System.out.println("            9 - Sair                                 ");
+			System.out.println("            1 - Novo Pedido                          ");
+			System.out.println("            2 - Editar Pedido                        ");
+			System.out.println("            3 - Procurar Pedido                      ");
+			System.out.println("            4 - Cancelar Pedido                      ");
+			System.out.println("            5 - Sair                                 ");
 			System.out.println("                                                     ");
 			System.out.println("*****************************************************");
 			System.out.println("Entre com a opção desejada:                          ");
@@ -33,43 +39,27 @@ public class Menu {
 
 			opcao = sc.nextInt();
 
-			if (opcao == 9) {
-				System.out.println("\nBanco do Brazil com Z - O seu Futuro começa aqui!");
+			if (opcao == 5) {
+				System.out.println("\nKON Fitwear agradece sua visita!");
                  sc.close();
 				System.exit(0);
 			}
 
 			switch (opcao) {
 				case 1:
-					System.out.println("Criar Conta\n\n");
+					System.out.println("Novo Pedido\n\n");
 
 					break;
 				case 2:
-					System.out.println("Listar todas as Contas\n\n");
+					System.out.println("Editar Pedido\n\n");
 
 					break;
 				case 3:
-					System.out.println("Consultar dados da Conta - por número\n\n");
+					System.out.println("Procurar Pedido\n\n");
 
 					break;
 				case 4:
-					System.out.println("Atualizar dados da Conta\n\n");
-
-					break;
-				case 5:
-					System.out.println("Apagar a Conta\n\n");
-
-					break;
-				case 6:
-					System.out.println("Saque\n\n");
-
-					break;
-				case 7:
-					System.out.println("Depósito\n\n");
-
-					break;
-				case 8:
-					System.out.println("Transferência entre Contas\n\n");
+					System.out.println("Cancelar Pedido\n\n");
 
 					break;
 				default:

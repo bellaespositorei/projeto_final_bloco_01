@@ -3,11 +3,11 @@ package roupa.repository;
 import roupa.model.Roupa;
 
 public interface RoupaRepository {
-	void novoPedido(Roupa roupa);
+	public abstract void novoPedido(Roupa roupa);
 
-    Roupa procurarPedido(String codigo);
+    public abstract void procurarPedido(int codigo);
 
-    void editarPedido(String codigo, Roupa roupa);
+    public abstract void editarPedido(int codigo, Roupa roupa);
 
-    void cancelarPedido(String codigo);
+    public abstract void cancelarPedido(int codigo);
 }
